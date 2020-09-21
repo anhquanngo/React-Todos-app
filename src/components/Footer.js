@@ -30,11 +30,12 @@ const Footer = memo(props => {
                 {
                     filterBtn.map(btn => {
                         return (
-                            <FilterButton {...btn} />
+                            <FilterButton key={`btn${btn.title}`}{...btn} />
                         )
                     })
                 }
             </ul>
+            <button className="clear-completed" >Clear completed</button>
         </footer>
     )
 })
